@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="htttp://www.thymeleaf.org">
+<head>
+<title>Home USER</title>
+<link rel="stylesheet" href="/css/homeUser.css" type="text/css">
+<style>
+@import
+	url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap')
+	;
+</style>
+<script></script>
+</head>
+<body>
+	<div id="backGround">
+		<div id="topBar">
+			<p class="welcome">BENVENUTO NELLA HOME PAGE</p>
+			<div class="Utente">
+				<span th:text="${#authentication.getPrincipal().getUsername()}">bla</span>
+				<span th:text="${#authentication.getPrincipal().authorities}">bla</span>
+				<a th:href="@{/logout}">Logout</a>
+			</div>
+		</div>
+		<div class="centralBox">
+			<div class="presentazione">
+				<p class="testo">
+					Benvenuto su Catering Premium. Il nostro servizio di catering offre
+					una vasta gamma di buffet, ideati dai nostri migliori chef! <br>
+					<a th:href="@{/home}"><img src="https://us.123rf.com/450wm/sergeypykhonin/sergeypykhonin1707/sergeypykhonin170700051/81891603-catering-service-logo-icon-or-label-for-design-menu-restaurant-or-cafe-vector-illustration.jpg?ver=6"></a>
+					<br> Ecco tutti i possibili servizi disponibili per te:
+				</p>
+			</div>
+			<div class="Buttons">
+				<a th:href="@{/ListaBuffet}"><button class="bottone" type="button">Elenco buffet</button></a>
+				<a th:href="@{/listaChef}"><button class="bottone" type="button">Elenco chef</button></a>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

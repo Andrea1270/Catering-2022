@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="htttp://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8" />
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+</style>
+<title>WelcomePage</title>
+<link rel="stylesheet" href="/css/index.css" type="text/css">
+</head>
+<body>
+  <div id="backGround">
+    <div class="CentralBox">
+		<div class="title">
+          <h2>Scopri</h2>
+		  <h1>CATERING PREMIUM</h1>
+		</div>
+		<div class="credenziali">
+		  <a th:href="@{/login}"><button class="bottone" type="button">ACCEDI</button></a>
+          <br>
+          <a th:href="@{/register}"><button class="bottone" type="button">REGISTRATI</button></a>
+		</div>
+	</div>
+   </div>
+</body>
+</html>
+

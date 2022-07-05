@@ -1,0 +1,115 @@
+body{
+  background-image:url("https://images.unsplash.com/photo-1641565095186-21ea5bb5aef0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1725&q=80");
+  background-size: cover;
+}
+
+#backG{
+  height: 1000px;
+  display:flex;
+  align-items:center;
+  justify-content: center;
+}
+
+#login-box{
+  background-color: lightblue;
+  border:3px solid orange;
+  width: 30%;
+  height: 68%;
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  border-radius: 20%;
+}
+
+.icona{
+  margin-top:10px;
+  border-radius:50%;
+  width: 150px;
+  height: 150px;
+  border:5px solid orange;
+}
+
+.icona:hover{
+  transform: scale(1.1);
+  transition-duration: 0.4s;
+}
+
+.welcome{
+  font-size: 25px;
+  font-family: 'Caveat', cursive;
+  margin-left: 15px;
+}
+
+.boxCredenziali{
+  display:flex;
+  flex-direction: column;
+  align-items:center;
+  width:300px;
+  height:300px;
+}
+
+input{
+  width: 300px;
+  height: 30px;
+  margin-top:10px;
+  font-size:20px;
+}
+
+button{
+  margin-top:10px;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  font-size:20px;
+  font-family: 'Caveat', cursive;
+  transition-duration: 0.4s;
+}
+
+button:hover{
+  background-color: orange; 
+  color: white;
+}
+
+button:active {
+  background-color: lightgreen;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+p{
+  font-family: 'Caveat', cursive;
+}
+
+.bottone{
+  display: flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+}
+
+a{
+	text-decoration: none;
+	color: black;
+	transition-duration: 0.4s;
+	font-family: 'Caveat', cursive;
+	font-size: 25px;
+}
+
+a:hover{
+	color: orange;
+	font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<style>
+@import
+	url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap')
+	;
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap')
+	;
+</style>
+<link href="/css/lavagnaBase.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="centralBox">
+		<div class="dettagli">
+			<h2>Informazione relative all'ingrediente: </h2>
+			<div th:if="${ingrediente}" th:object="${ingrediente}">
+				<p th:text="*{nome}">nome</p>
+				<p>Origine dell'ingrediente:<span th:text="*{origine}">origine</span></p>
+				<p>Descrizione:<span th:text="*{descrizione}">descrizione</span></p>
+			</div>
+			<a th:href="@{/admin/home}"><img class="catering" src="https://us.123rf.com/450wm/sergeypykhonin/sergeypykhonin1707/sergeypykhonin170700051/81891603-catering-service-logo-icon-or-label-for-design-menu-restaurant-or-cafe-vector-illustration.jpg?ver=6"></a>						
+		</div>
+	</div>
+</body>
+</html>

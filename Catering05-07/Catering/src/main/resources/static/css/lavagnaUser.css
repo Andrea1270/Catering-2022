@@ -1,0 +1,63 @@
+body{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background-image:url("/images/legnoBianco.jpeg");
+  background-size:cover;
+}
+
+.centralBox{
+  background-image: url("/images/lavagnetta.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height:900px;
+  border-radius:10px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  margin-top:30px;
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.title{
+  width:80%;
+  color:white;
+  text-align:center;
+  margin-top:25px;
+  font-family: 'Fredericka the Great', cursive;
+}
+
+.menu{
+  width:80%;
+  color:white;
+  font-family: 'Fredericka the Great', cursive;
+}
+
+.link1{
+  text-decoration: none;
+  color: white;
+  font-size:30px;
+  transition-duration: 0.4s;
+}
+
+.link1:hover{
+  font-size:35px;
+  text-decoration:underline;
+}
+
+.catering{
+  width:15%;
+  border-radius:50%;
+  border:5px solid orange;
+}
+
+.catering:hover{
+  transform: scale(1.1);
+  transition-duration: 0.4s;
+}

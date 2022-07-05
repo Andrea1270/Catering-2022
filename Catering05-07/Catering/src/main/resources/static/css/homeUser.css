@@ -1,0 +1,95 @@
+body{
+	background-image:url("/images/Piatto.jpeg");
+  background-size:cover
+}
+
+#backGround{
+  height: 1000px;
+  display: flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+#topBar{
+  height:100px;
+  width:1500px;
+  text-align: center;
+  background: #4d2600;
+}
+
+.welcome{
+  margin-top: -5px;
+  color: white;
+  font-family:'Playfair Display', cursive;
+  font-size: 40px;
+}
+
+.Utente{
+  margin-top: -20px;
+  font-family:"Pacifico", cursive;
+  color: orange;
+}
+
+.Utente a{
+	color: red;
+	font-family:'Playfair Display', cursive;
+}
+
+.centralBox{
+  border:8px solid #4d2600;
+  width:40%;
+  height:50%;
+  margin-top:110px;
+  background: linear-gradient(to top, #ffffcc 0%, #663300 100%);
+  box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+  0 12.5px 10px rgba(0, 0, 0, 0.06),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+  0 100px 80px rgba(0, 0, 0, 0.12);
+}
+
+.presentazione{
+  text-align:center;
+}
+
+.testo{
+  font-family: "Pacifico", cursive;
+  font-size: 25px;
+}
+
+img{
+  width:20%;
+  margin-top:10px;
+  border-radius:50%;
+  border:5px solid orange;
+}
+
+img:hover{
+  transform: scale(1.1);
+  transition-duration: 0.4s;
+}
+
+.Buttons{
+  text-align:center;
+  display:flex;
+  justify-content:space-around;
+}
+
+button{
+  border-radius: 12px;
+  border: 2px solid lightgray;
+  transition-duration: 0.4s;
+  width:80px;
+  background-color: lightcyan;
+  font-size:15px;
+  font-family: 'Playfair Display', serif;
+}
+
+button:hover{
+  background-color: orange; /* Green */
+  border: 2px solid orange;
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}

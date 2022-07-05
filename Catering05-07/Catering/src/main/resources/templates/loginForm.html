@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="htttp://www.thymeleaf.org">
+<head>
+<title>Login</title>
+<style></style>
+<script></script>
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Josefin+Sans:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/loginForm.css" type="text/css">
+</head>
+<body>
+	<div id="backG">
+		<div id="login-box">
+			<img class="icona"
+				src="https://us.123rf.com/450wm/sergeypykhonin/sergeypykhonin1707/sergeypykhonin170700051/81891603-catering-service-logo-icon-or-label-for-design-menu-restaurant-or-cafe-vector-illustration.jpg?ver=6">
+			<div class="boxCredenziali">
+				<h1 class="welcome">Benvenuto sul sito di Catering Premium!</h1>
+				<p>Prima di continuare, autenticati...</p>
+				<form th:action="@{/login}" method="POST">
+					<!-- Dopo aver inserito i dati validali con la /login di spring e vai in /home -->
+					<div>
+						<input name="username" type="text" placeholder="username..." required  />
+					</div>
+					<div>
+						<input name="password" type="password" placeholder="password..." required />
+					</div>
+					<div class="bottone">
+						<button type="submit">Accedi</button>
+					</div>
+					<div  class="bottone">
+						<p>Nuovo Utente?</p>
+						<a th:href="@{/register}">Registrati</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

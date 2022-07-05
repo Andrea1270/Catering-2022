@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="htttp://www.thymeleaf.org">
+<head>
+<title>Home</title>
+<style>
+@import
+	url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap')
+	;
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap')
+	;
+</style>
+<link href="/css/lavagnaBase.css" rel="stylesheet" type="text/css">
+<script></script>
+</head>
+<body>
+	<div class="centralBox" th:object="${piatto}">
+		<div class="dettagli">
+			<h2>Nome piatto:</h2>
+			<p th:text="*{nome}">Nomegenerico</p>
+			<span>Descrizione piatto:</span>
+			<span th:text="*{descrizione}">Descrizione generica</span>
+			<p>Ingredienti:</p>
+			<ul>
+	            <li th:each="ingrediente : ${ingredientiPiatto}">
+	                <a class="link1" href="admin/ingrediente.html" th:href="@{'/admin/ingrediente' + '/' + ${ingrediente.id}}" th:text="${ingrediente.nome}">Nome Ingrediente</a>
+	                <a class="link2" th:href="@{'/admin/deleteIngredientePiatto' + '/' + ${piatto.id} + '/' + ${ingrediente.id}}" >Elimina</a><br>
+	            </li>
+	        </ul>
+		<div class="linea">____ . ____</div>
+			<h2>Elenco degli ingredienti disponibili:</h2>
+			<div th:each="ingrediente : ${ListaIngredienti}">
+				<span th:text="${ingrediente.nome}">nome Piatto</span>
+				<span>
+					<a class="link4" th:href="@{'/admin/piatto' + '/' + ${piatto.id} + '/' + ${ingrediente.id}}">+</a>
+				</span>
+			</div>
+		<div class="linea">____ . ____</div>
+			<div>
+				<h2>Inserisci nuovi ingredienti:</h2>
+				<a class="link4" th:href="@{/admin/ingredienteForm}">Crea</a>
+			</div>
+			<a th:href="@{/admin/home}"><img class="catering" src="https://us.123rf.com/450wm/sergeypykhonin/sergeypykhonin1707/sergeypykhonin170700051/81891603-catering-service-logo-icon-or-label-for-design-menu-restaurant-or-cafe-vector-illustration.jpg?ver=6"></a>	
+		</div>
+	</div>
+</body>
+</html>

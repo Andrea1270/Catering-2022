@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="htttp://www.thymeleaf.org">
+<head>
+<title>listaPiatti</title>
+<style>
+@import
+	url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap')
+	;
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap')
+	;
+</style>
+<script></script>
+<link href="/css/lavagna.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="centralBox">
+		<div class="title">
+			<h2>BENVENUTO NELLA LISTA DEGLI PIATTI!</h2>
+			<a th:href="@{/admin/home}"><img class="catering"
+				src="https://us.123rf.com/450wm/sergeypykhonin/sergeypykhonin1707/sergeypykhonin170700051/81891603-catering-service-logo-icon-or-label-for-design-menu-restaurant-or-cafe-vector-illustration.jpg?ver=6"></a>
+			<p>QUI POTRAI VISUALIZZARE TUTTI I NOSTRI PIATTI DISPONIBILI AL
+				MOMENTO</p>
+		</div>
+		<div class="menu">
+			<ul>
+				<li th:each="piatto : ${ListaPiatti}">
+				 <span> 
+				 <a class="link1" th:href="@{'/admin/piatto' + '/' + ${piatto.id}}" th:text="${piatto.nome}">Piatto</a>
+				 <a class="link2" th:href="@{'/admin/deletePiattoDaLista' + '/' + ${piatto.id}}">Elimina</a> 
+				 </span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

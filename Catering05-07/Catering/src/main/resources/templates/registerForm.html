@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>RegisterForm</title>
+    <style></style>
+    <script></script>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Josefin+Sans:ital@1&display=swap" rel="stylesheet">
+    <link href="css/registerForm.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <div id="backG">
+      <div id="login-box">
+        <img class="icona" src="https://us.123rf.com/450wm/sergeypykhonin/sergeypykhonin1707/sergeypykhonin170700051/81891603-catering-service-logo-icon-or-label-for-design-menu-restaurant-or-cafe-vector-illustration.jpg?ver=6">
+        <div class="boxCredenziali">
+          <h1 class="welcome">
+            Benvenuto sul sito di Catering Premium, qui troverai ampie scelte di buffet per qualunque evento!
+          </h1>
+          <p>
+            Perfavore registrati per continuare...
+          </p>
+         <form th:action="@{/RegistrazioneUtente}" method="post">
+         	<div class = checkNome>
+            	<input type="text" placeholder="nome" th:field="${Utente.nome}"/>
+            	<div th:if = "${#fields.hasErrors('Utente.nome')}" th:errors = "${Utente.nome}"></div>	
+         	</div>
+         	<div class = checkCognome>
+            	<input type="text" placeholder="cognome" th:field="${Utente.cognome}" />
+            	<div th:if = "${#fields.hasErrors('Utente.cognome')}" th:errors = "${Utente.cognome}"></div>
+         	</div>
+         	<div class = checkUser>
+            	<input type="text" placeholder="username" th:field="${Credenziali.username}" />
+            	<div th:if = "${#fields.hasErrors('Credenziali.username')}" th:errors = "${Credenziali.username}"></div>
+         	</div>
+         	<div class = checkPassword>
+            	<input type="password" placeholder="password" th:field="${Credenziali.password}" />
+            	<div th:if = "${#fields.hasErrors('Credenziali.password')}" th:errors = "${Credenziali.password}"></div>
+         	</div>
+         	<div class="bottone">
+				<button type="submit">Conferma</button>
+			</div>
+			<div  class="bottone">
+				<p>Gia registrato?</p>
+				<a th:href="@{/login}">Accedi</a>
+			</div>
+		</form>
+      	</div>
+      </div>
+    </div>
+  </body>
+</html>

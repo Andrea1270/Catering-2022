@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="htttp://www.thymeleaf.org">
+<head>
+<title>listaChef</title>
+<style>
+@import
+	url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap')
+	;
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap')
+	;
+</style>
+<script></script>
+<link href="/css/lavagna.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="centralBox">
+		<div class="title">
+			<h2>BENVENUTO NELLA LISTA DEGLI CHEF!</h2>
+			<a th:href="@{/admin/home}"><img class="catering"
+				src="https://us.123rf.com/450wm/sergeypykhonin/sergeypykhonin1707/sergeypykhonin170700051/81891603-catering-service-logo-icon-or-label-for-design-menu-restaurant-or-cafe-vector-illustration.jpg?ver=6"></a>
+			<p>QUI POTRAI VISUALIZZARE TUTTI I NOSTRI CHEF DISPONIBILI AL
+				MOMENTO</p>
+		</div>
+		<div class="menu">
+			<ul>
+				<li th:each="chef : ${ListaChef}"><a class="link1"
+					th:href="@{'/admin/chef' + '/' + ${chef.id}}"
+					th:text="${chef.nome} + ' ' + ${chef.cognome}">nome cognome</a> <a
+					class="link2" th:href="@{'/admin/deleteChef' + '/' + ${chef.id}}">Elimina</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

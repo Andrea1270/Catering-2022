@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="htttp://www.thymeleaf.org">
+<head>
+<title>Home</title>
+<style>
+@import
+	url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap')
+	;
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Fredericka+the+Great&display=swap')
+	;
+</style>
+<link href="/css/lavagnaBase.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	<div class="centralBox">
+		<div class="dettagli">
+			<h2>Nome piatto:</h2>
+			<p th:text="${piatto.nome}">Nomegenerico</p> 
+			<span>Descrizione:</span> 
+			<span th:text="${piatto.descrizione}">Descrizione generica</span> 
+			<h2>Ingredienti:</h2>
+			<ul>
+				<li th:each="ingrediente : ${ingredientiPiatto}">
+				<a class="link1" th:href="@{'/ingrediente' + '/' + ${ingrediente.id}}" th:text="${ingrediente.nome}">Nome Ingrediente</a>
+				</li>
+			</ul>
+			<a th:href="@{/home}"><img class="catering" src="https://us.123rf.com/450wm/sergeypykhonin/sergeypykhonin1707/sergeypykhonin170700051/81891603-catering-service-logo-icon-or-label-for-design-menu-restaurant-or-cafe-vector-illustration.jpg?ver=6"></a>								
+		</div>
+	</div>
+</body>
+</html>

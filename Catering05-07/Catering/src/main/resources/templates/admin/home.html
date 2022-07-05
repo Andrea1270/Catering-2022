@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Home ADMIN</title>
+<link rel="stylesheet" href="/css/home.css" type="text/css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap');
+</style>
+<script></script>
+</head>
+<body>
+  <div id="backGround">
+    <div id="topBar">
+      <p class="welcome">BENVENUTO NELLA HOME PAGE</p>
+      <div class="Utente">
+      <span th:text="${#authentication.getPrincipal().getUsername()}">bla</span>
+      <span th:text="${#authentication.getPrincipal().authorities}">bla</span>
+      <a th:href="@{/logout}">Logout</a>
+      </div>
+    </div>
+    <div class="centralBox">
+      <div class="presentazione">
+        <p class="testo">
+         Benvenuto su Catering Premium. Il nostro servizio di catering offre
+         una vasta gamma di buffet, ideati dai nostri migliori chef!
+         <br>
+          <a th:href="@{/admin/home}"><img src="https://us.123rf.com/450wm/sergeypykhonin/sergeypykhonin1707/sergeypykhonin170700051/81891603-catering-service-logo-icon-or-label-for-design-menu-restaurant-or-cafe-vector-illustration.jpg?ver=6"></a>
+         <br>
+          Ecco tutti i possibili servizi disponibili per te:
+        </p>
+      </div>
+      <div class="Buttons">
+        <a th:href="@{/admin/ListaBuffet}"><button class="bottone" type="button">Elenco buffet</button></a><a th:href="@{/admin/buffet}"><button class="bottone" type="button">Inserisci buffet</button></a>
+        <a th:href="@{/admin/listaChef}"><button class="bottone" type="button">Elenco chef</button></a><a th:href="@{/admin/chef}"><button class="bottone" type="button">Inserisci chef</button></a>
+        <a th:href="@{/admin/listaPiatti}"><button class="bottone" type="button">Elenco Piatti</button></a><a th:href="@{/admin/piatto}"><button class="bottone" type="button">Inserisci Piatto</button></a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
